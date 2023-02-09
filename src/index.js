@@ -8,8 +8,13 @@ module.exports = function towelSort (matrix) {
   }
   else {
   	for ( let i = 0; i < matrix.length; i++) {
- 			matrix[i].forEach( val => result.push(val))
+    	if ( i % 2 === 0 ){
+      	matrix[i].forEach( val => result.push(val))
+      }
+ 			else {
+      	matrix[i].reverse().forEach( val => result.push(val))
+      }
  		}
-result.sort((a,b) => a - b)
+console.log(result)
 return result;}
 }
